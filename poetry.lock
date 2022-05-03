@@ -111,7 +111,7 @@ python-versions = "*"
 
 [[package]]
 name = "eventsourcing"
-version = "9.2.10"
+version = "9.2.11"
 description = "Event sourcing in Python"
 category = "main"
 optional = false
@@ -613,7 +613,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "e63dde271e8907425cbd87d604d77ac7a84e368ac9498b0f2187304e55328679"
+content-hash = "341e7b705b8e921ffeadcea5f6e91c5d7c9c62147436828eefa0285381fde062"
 
 [metadata.files]
 atomicwrites = [
@@ -712,8 +712,8 @@ distlib = [
     {file = "distlib-0.3.4.zip", hash = "sha256:e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579"},
 ]
 eventsourcing = [
-    {file = "eventsourcing-9.2.10-py3-none-any.whl", hash = "sha256:4cb87ce9896255454345ce28fafa5d0b4f443431f72caa425c67da7ebfc13ba5"},
-    {file = "eventsourcing-9.2.10.tar.gz", hash = "sha256:8a1a6dc5cb48c978d77fe205dc5220cf970b9d0b90520491535bc1e467cfd3fb"},
+    {file = "eventsourcing-9.2.11-py3-none-any.whl", hash = "sha256:f06b9c4bf3954992cae2ba7da16a732321e9f908545956d3c3568848131bdb34"},
+    {file = "eventsourcing-9.2.11.tar.gz", hash = "sha256:8743f9ed4feaf2291d87c71befd04334d218e6e84b3e4f109567e38703697382"},
 ]
 filelock = [
     {file = "filelock-3.6.0-py3-none-any.whl", hash = "sha256:f8314284bfffbdcfa0ff3d7992b023d4c628ced6feb957351d4c48d059f56bc0"},
