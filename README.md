@@ -26,6 +26,10 @@ dependencies such as Black, isort and pytest.
 
 Add tests in `./tests`. Add code in `./eventsourcing_axonserver`.
 
+Start Axon Server.
+
+    $ make start-axon-server
+
 Run tests.
 
     $ make test
@@ -41,3 +45,7 @@ Reformat the code.
 Add dependencies in `pyproject.toml` and then update installed packages.
 
     $ make update-packages
+
+Stop Axon Server.
+
+    $ make stop-axon-server
