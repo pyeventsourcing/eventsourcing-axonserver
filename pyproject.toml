@@ -11,6 +11,7 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python",
@@ -23,7 +24,7 @@ include = ["eventsourcing_axonserver/py.typed"]
 [tool.poetry.dependencies]
 python = "^3.7"
 eventsourcing = { version = "~9.2.11" }
-axonclient = { version = "~0.0.2" }
+axonclient = { version = "~0.1.1" }
 
 [tool.poetry.dev-dependencies]
 black = { version = "*", allow-prereleases = true }
