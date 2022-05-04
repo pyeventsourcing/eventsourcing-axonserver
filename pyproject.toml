@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eventsourcing-axonserver"
-version = "0.1.dev0"
+version = "0.1"
 description = "Eventsourcing with Axon Server"
 authors = [
     "John Bywater <john.bywater@appropriatesoftware.net>",
