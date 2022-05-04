@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from typing import Any, Iterable, List, Optional, Sequence, cast
+from typing import Any, List, Optional, Sequence
 from uuid import UUID, uuid4
 
 from axonclient.client import AxonClient, AxonEvent
@@ -135,11 +135,8 @@ class AxonServerApplicationRecorder(AxonServerAggregateRecorder, ApplicationReco
         stop: Optional[int] = None,
         topics: Sequence[str] = (),
     ) -> List[Notification]:
-        generator = cast(
-            Iterable[AxonEvent],
-            self.axon_client.iter_events(
-                tracking_token=start, number_of_permits=INT32_MAX
-            ),
+        generator = self.axon_client.iter_events(
+            tracking_token=start, number_of_permits=INT32_MAX
         )
         notifications: List[Notification] = []
         count = 0
