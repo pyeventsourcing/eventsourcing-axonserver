@@ -22,7 +22,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "axonclient"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python client for Axon Server"
 category = "main"
 optional = false
@@ -609,7 +609,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "1c2ce5b60b5c0fc6d315edc83176dc860afdb1001cc5349898486582d269ecf9"
+content-hash = "3854284f4aa43933d1372ee6fb90b7c4363037803ab1bc7841914c5286f6b042"
 
 [metadata.files]
 atomicwrites = [
@@ -621,8 +621,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 axonclient = [
-    {file = "axonclient-0.1.1-py3-none-any.whl", hash = "sha256:426db89dccbdff9ae5341fcea61041e93a16e80293d13745b90af6def007eb62"},
-    {file = "axonclient-0.1.1.tar.gz", hash = "sha256:059ee7bac909a684356067daea8c472c978410e009dbd79c00e54da5e472a6de"},
+    {file = "axonclient-0.1.2-py3-none-any.whl", hash = "sha256:d0eaa15fa7ff349b94cd75ad303a62ebd4ebf81149c67e3a3fe7169907eab768"},
+    {file = "axonclient-0.1.2.tar.gz", hash = "sha256:0ed1eaacc6867333c2ace9d640780697535012fa8c1c76e6224dc02486398286"},
 ]
 black = [
     {file = "black-22.3.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:2497f9c2386572e28921fa8bec7be3e51de6801f7459dffd6e62492531c47e09"},
