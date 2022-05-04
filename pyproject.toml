@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eventsourcing-axonserver"
-version = "0.1"
+version = "0.1.1"
 description = "Python package for eventsourcing with Axon Server"
 authors = [
     "John Bywater <john.bywater@appropriatesoftware.net>",
