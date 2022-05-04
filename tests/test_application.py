@@ -15,12 +15,12 @@ class TestApplicationWithAxonServer(ExampleApplicationTestCase):
         Aggregate.INITIAL_VERSION = 0
         super().setUp()
         os.environ["PERSISTENCE_MODULE"] = "eventsourcing_axonserver"
-        os.environ["AXON_SERVER_URI"] = DEFAULT_LOCAL_AXONSERVER_URI
+        os.environ["AXONSERVER_URI"] = DEFAULT_LOCAL_AXONSERVER_URI
 
     def tearDown(self) -> None:
         Aggregate.INITIAL_VERSION = self.original_initial_version
         del os.environ["PERSISTENCE_MODULE"]
-        del os.environ["AXON_SERVER_URI"]
+        del os.environ["AXONSERVER_URI"]
         super().tearDown()
 
     def test_example_application(self) -> None:

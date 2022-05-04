@@ -2,7 +2,7 @@
 
 This package supports using the Python
 [eventsourcing](https://github.com/pyeventsourcing/eventsourcing) library
-with Axon Server.
+with [Axon Server](https://developer.axoniq.io/axon-server).
 
 ## Installation
 
@@ -14,7 +14,9 @@ Please note, it is recommended to install Python packages into a Python virtual 
 
 ## Getting started
 
-Define aggregates and applications in the usual way.
+Define aggregates and applications in the usual way. Please note, aggregate
+sequences  in Axon Server start from position `0`, so set INITIAL_VERSION
+on your aggregate classes accordingly.
 
 ```python
 from eventsourcing.application import Application
@@ -38,6 +40,8 @@ class TrainingSchool(Application):
 
 
 class Dog(Aggregate):
+    INITIAL_VERSION = 0
+
     @event('Registered')
     def __init__(self, name):
         self.name = name
@@ -63,7 +67,8 @@ school = TrainingSchool(env={
 })
 ```
 
-The application's methods may be called from interfaces.
+The application's methods may be then called, from tests and
+user interfaces.
 
 ```python
 school.register('Fido')
@@ -75,7 +80,7 @@ assert tricks == ['roll over', 'play dead']
 
 For more information, please refer to the Python
 [eventsourcing](https://github.com/johnbywater/eventsourcing) library
-and the [Axon Server](https://developer.axoniq.io/axon-server/overview) project.
+and the [Axon Server](https://developer.axoniq.io/axon-server) project.
 
 ## Developers
 

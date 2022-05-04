@@ -38,12 +38,12 @@ class TestFactory(InfrastructureFactoryTestCase):
     def setUp(self) -> None:
         self.env = Environment("TestCase")
         self.env[InfrastructureFactory.PERSISTENCE_MODULE] = Factory.__module__
-        self.env[Factory.AXON_SERVER_URI] = DEFAULT_LOCAL_AXONSERVER_URI
+        self.env[Factory.AXONSERVER_URI] = DEFAULT_LOCAL_AXONSERVER_URI
         super().setUp()
 
     def tearDown(self) -> None:
-        if Factory.AXON_SERVER_URI in os.environ:
-            del os.environ[Factory.AXON_SERVER_URI]
+        if Factory.AXONSERVER_URI in os.environ:
+            del os.environ[Factory.AXONSERVER_URI]
         super().tearDown()
 
 

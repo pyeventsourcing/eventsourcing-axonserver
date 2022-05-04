@@ -19,16 +19,16 @@ class Factory(InfrastructureFactory):
     Infrastructure factory for Axon infrastructure.
     """
 
-    AXON_SERVER_URI = "AXON_SERVER_URI"
+    AXONSERVER_URI = "AXONSERVER_URI"
 
     def __init__(self, env: Environment):
         super().__init__(env)
-        axon_server_uri = self.env.get(self.AXON_SERVER_URI)
+        axon_server_uri = self.env.get(self.AXONSERVER_URI)
         if axon_server_uri is None:
             raise EnvironmentError(
-                f"'{self.AXON_SERVER_URI}' not found "
+                f"'{self.AXONSERVER_URI}' not found "
                 "in environment with keys: "
-                f"'{', '.join(self.env.create_keys(self.AXON_SERVER_URI))}'"
+                f"'{', '.join(self.env.create_keys(self.AXONSERVER_URI))}'"
             )
         self.axon_client = AxonClient(uri=axon_server_uri)
 
