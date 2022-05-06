@@ -84,8 +84,8 @@ and the [Axon Server](https://developer.axoniq.io/axon-server) project.
 
 ## Developers
 
-Clone the eventsourcing-axonserver repository, set up a virtual
-environment, and install dependencies.
+Clone the [project repository](https://github.com/johnbywater/eventsourcing),
+set up a virtual environment, and install dependencies.
 
 Use your IDE (e.g. PyCharm) to open the project repository. Create a
 Poetry virtual environment, and then update packages.
