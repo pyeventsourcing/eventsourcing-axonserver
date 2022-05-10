@@ -15,44 +15,44 @@ Please note, it is recommended to install Python packages into a Python virtual 
 ## Getting started
 
 Define aggregates and applications in the usual way. Please note, aggregate
-sequences  in Axon Server start from position `0`, so set INITIAL_VERSION
-on your aggregate classes accordingly.
+sequences  in Axon Server are expected to start from position `0`, whereas
+the default for the library's `Aggregate` class is to start from `1`. So we
+need to set the `INITIAL_VERSION` attribute on the aggregate class to `0`.
 
 ```python
+from typing import Any, Dict
+from uuid import UUID
+
 from eventsourcing.application import Application
 from eventsourcing.domain import Aggregate, event
-from uuid import uuid5, NAMESPACE_URL
 
 
 class TrainingSchool(Application):
-    def register(self, name):
+    def register(self, name: str) -> UUID:
         dog = Dog(name)
         self.save(dog)
+        return dog.id
 
-    def add_trick(self, name, trick):
-        dog = self.repository.get(Dog.create_id(name))
+    def add_trick(self, dog_id: UUID, trick: str) -> None:
+        dog = self.repository.get(dog_id)
         dog.add_trick(trick)
         self.save(dog)
 
-    def get_tricks(self, name):
-        dog = self.repository.get(Dog.create_id(name))
-        return dog.tricks
+    def get_dog(self, dog_id) -> Dict[str, Any]:
+        dog = self.repository.get(dog_id)
+        return {'name': dog.name, 'tricks': tuple(dog.tricks)}
 
 
 class Dog(Aggregate):
     INITIAL_VERSION = 0
 
     @event('Registered')
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         self.name = name
         self.tricks = []
 
-    @staticmethod
-    def create_id(name):
-        return uuid5(NAMESPACE_URL, f'/dogs/{name}')
-
     @event('TrickAdded')
-    def add_trick(self, trick):
+    def add_trick(self, trick: str) -> None:
         self.tricks.append(trick)
 ```
 
@@ -71,11 +71,17 @@ The application's methods may be then called, from tests and
 user interfaces.
 
 ```python
-school.register('Fido')
-school.add_trick('Fido', 'roll over')
-school.add_trick('Fido', 'play dead')
-tricks = school.get_tricks('Fido')
-assert tricks == ['roll over', 'play dead']
+# Register dog.
+dog_id = school.register('Fido')
+
+# Add tricks.
+school.add_trick(dog_id, 'roll over')
+school.add_trick(dog_id, 'play dead')
+
+# Get details.
+dog = school.get_dog(dog_id)
+assert dog["name"] == 'Fido'
+assert dog["tricks"] == ('roll over', 'play dead')
 ```
 
 For more information, please refer to the Python

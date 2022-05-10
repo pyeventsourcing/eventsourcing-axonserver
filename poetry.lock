@@ -107,7 +107,7 @@ python-versions = "*"
 
 [[package]]
 name = "eventsourcing"
-version = "9.2.11"
+version = "9.2.12"
 description = "Event sourcing in Python"
 category = "main"
 optional = false
@@ -561,7 +561,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "types-protobuf"
-version = "3.19.18"
+version = "3.19.19"
 description = "Typing stubs for protobuf"
 category = "dev"
 optional = false
@@ -609,7 +609,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "3854284f4aa43933d1372ee6fb90b7c4363037803ab1bc7841914c5286f6b042"
+content-hash = "54d726c9bdc58f1b0f570d313ac217d5ee075d6aadbcad4aa8c8223dbcdcb17a"
 
 [metadata.files]
 atomicwrites = [
@@ -709,8 +709,8 @@ distlib = [
     {file = "distlib-0.3.4.zip", hash = "sha256:e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579"},
 ]
 eventsourcing = [
-    {file = "eventsourcing-9.2.11-py3-none-any.whl", hash = "sha256:f06b9c4bf3954992cae2ba7da16a732321e9f908545956d3c3568848131bdb34"},
-    {file = "eventsourcing-9.2.11.tar.gz", hash = "sha256:8743f9ed4feaf2291d87c71befd04334d218e6e84b3e4f109567e38703697382"},
+    {file = "eventsourcing-9.2.12-py3-none-any.whl", hash = "sha256:3ec2b43350312a986768ab817bd6521a182c599d4f5580bdd3dafe13d908e0cf"},
+    {file = "eventsourcing-9.2.12.tar.gz", hash = "sha256:f5c5f1c689b0c232033e4d34e15ed1943a29fc47fb7e2ec65227c26780298ec1"},
 ]
 filelock = [
     {file = "filelock-3.6.0-py3-none-any.whl", hash = "sha256:f8314284bfffbdcfa0ff3d7992b023d4c628ced6feb957351d4c48d059f56bc0"},
@@ -1054,8 +1054,8 @@ typed-ast = [
     {file = "typed_ast-1.5.3.tar.gz", hash = "sha256:27f25232e2dd0edfe1f019d6bfaaf11e86e657d9bdb7b0956db95f560cceb2b3"},
 ]
 types-protobuf = [
-    {file = "types-protobuf-3.19.18.tar.gz", hash = "sha256:670b25c1a4f3d650a9d8a009b0cf19a1aa0e7cba044045648b563e825f35d4d3"},
-    {file = "types_protobuf-3.19.18-py3-none-any.whl", hash = "sha256:78d677fefb10e3ea88b8c0fab543833e82cd6eb27e3f71aeda2d5cd9bd503ae1"},
+    {file = "types-protobuf-3.19.19.tar.gz", hash = "sha256:c040828ff12685ec6884d2c985ed05adcbef233620290b830c8a79fbed26c3fa"},
+    {file = "types_protobuf-3.19.19-py3-none-any.whl", hash = "sha256:2f7a000395668178569476b63fc3152d22fd932a27a2e1041d69b9ea4e62aee3"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.2.0-py3-none-any.whl", hash = "sha256:6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708"},

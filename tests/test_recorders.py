@@ -13,6 +13,8 @@ from eventsourcing_axonserver.recorders import (
 
 
 class TestAxonServerAggregateRecorder(AggregateRecorderTestCase):
+    INITIAL_VERSION = 0
+
     def setUp(self) -> None:
         self.axon_client = AxonClient(DEFAULT_LOCAL_AXONSERVER_URI)
 
@@ -24,6 +26,8 @@ class TestAxonServerAggregateRecorder(AggregateRecorderTestCase):
 
 
 class TestAxonServerApplicationRecorder(ApplicationRecorderTestCase):
+    INITIAL_VERSION = 0
+
     def setUp(self) -> None:
         self.axon_client = AxonClient(DEFAULT_LOCAL_AXONSERVER_URI)
 

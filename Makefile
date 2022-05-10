@@ -82,6 +82,10 @@ build:
 publish:
 	$(POETRY) publish
 
+.PHONY: run-axon-server
+run-axon-server:
+	export PATH="/usr/local/opt/openjdk@11/bin:$$PATH"; ~/AxonServer-4.5.11/axonserver.jar
+
 .PHONY: start-axon-server
 start-axon-server:
 	docker run -d --name my-axon-server -p 8024:8024 -p 8124:8124 axoniq/axonserver axonserver
